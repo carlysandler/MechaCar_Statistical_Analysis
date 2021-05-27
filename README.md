@@ -29,7 +29,25 @@ Performing `Retrospective, Statistical Analysis` on Car Manufacturing Datasets: 
 ### Deliverable 1: Linear Regression to Predict MPG 
 ---
 __Technical Analysis__
+```
+#Deliverable 1: Linear Regression to Predict MPG
 
+#Setting up R package dependencies:dplyr, tidyverse
+library(dplyr)
+library(tidyverse)
+
+#Import and read in the `MechaCar_mpg.csv` file as a dataframe
+mecha_mpg <- read.csv(file='MechaCar_mpg.csv', check.names = F, stringsAsFactors = F)
+
+#Perform Linear Regression using `lm()` function
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = mecha_mpg)
+
+#Determine the p-value and the r-squared value for linear regression model using `summary()` function
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = mecha_mpg))
+```
+__Output of Results__
+
+<img width="452" alt="D1_LinearRegressionModel" src="https://user-images.githubusercontent.com/77628698/119855515-f7d75180-bedf-11eb-8c8b-e46bed422d04.png">
 
 _Summary of Results_
 
