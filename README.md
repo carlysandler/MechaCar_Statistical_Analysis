@@ -27,7 +27,7 @@ Performing `Retrospective, Statistical Analysis` on Car Manufacturing Datasets: 
 
 ## Deliverable 1: Linear Regression to Predict MPG 
 ---
-_Technical Analysis_
+#### _Technical Analysis_
 ```
 #Deliverable 1: Linear Regression to Predict MPG
 
@@ -48,25 +48,26 @@ _Output of Results_
 
 <img width="452" alt="D1_LinearRegressionModel" src="https://user-images.githubusercontent.com/77628698/119855515-f7d75180-bedf-11eb-8c8b-e46bed422d04.png">
 
-_Summary of Results_
+#### _Summary of Results_
 
 
 
-### Deliverable 2: Summary Statistics on Suspension Coils
+## Deliverable 2: Summary Statistics on Suspension Coils
 ---
-__Technical Analysis__
+#### _Technical Analysis_
+
+_Output of Results_
+
+#### _Summary of Results_
 
 
-_Summary of Results_
 
-
-
-### Deliverable 3: T-Test on Suspension Coils
+## Deliverable 3: T-Test on Suspension Coils
 ---
-__Technical Analysis__
+#### _Technical Analysis_
 
 
-_Summary of Results_
+#### _Summary of Results_
 
 ---
 
