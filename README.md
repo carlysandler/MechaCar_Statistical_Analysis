@@ -13,22 +13,21 @@ Performing `Retrospective, Statistical Analysis` on Car Manufacturing Datasets: 
 
 ---
 ## Features and Data Sources
----
-	- Data Source: `MechaCar_mpg.csv` and `Suspension_Coil.csv`
-	- Data Tools: `tidyverse`, `dplyr`, `ggplot2` and `MechaCarChallenge.RScript`
-	- Software: `RStudio` and `R`
+- Data Source: `MechaCar_mpg.csv` and `Suspension_Coil.csv`
+- Data Tools: `tidyverse`, `dplyr`, `ggplot2` and `MechaCarChallenge.RScript`
+- Software: `RStudio` and `R`
 
 ## Challenge Deliverables
 ---
-	- Deliveragle 1: Linear Regression to Predict MPG
-	- Deliverable 2: Summary Statistics on Suspension Coils
-	- Deliverable 3: T-Test on Suspension Coils
-	- Deliverable 4: Design a Study Comparing the MechaCar to the competition
+- Deliveragle 1: Linear Regression to Predict MPG
+- Deliverable 2: Summary Statistics on Suspension Coils
+- Deliverable 3: T-Test on Suspension Coils
+- Deliverable 4: Design a Study Comparing the MechaCar to the competition
 
 
-### Deliverable 1: Linear Regression to Predict MPG 
+## Deliverable 1: Linear Regression to Predict MPG 
 ---
-__Technical Analysis__
+_Technical Analysis_
 ```
 #Deliverable 1: Linear Regression to Predict MPG
 
@@ -45,7 +44,7 @@ lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AW
 #Determine the p-value and the r-squared value for linear regression model using `summary()` function
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = mecha_mpg))
 ```
-__Output of Results__
+_Output of Results_
 
 <img width="452" alt="D1_LinearRegressionModel" src="https://user-images.githubusercontent.com/77628698/119855515-f7d75180-bedf-11eb-8c8b-e46bed422d04.png">
 
