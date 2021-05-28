@@ -49,8 +49,11 @@ _Output of Results_
 <img width="452" alt="D1_LinearRegressionModel" src="https://user-images.githubusercontent.com/77628698/119855515-f7d75180-bedf-11eb-8c8b-e46bed422d04.png">
 
 #### _Summary of Results_
+The above exercise of building a predicitve, multiple linear regression modeling tool allows for data scientists to extrapolate future observations and measurements of a continuous, dependent variable of interest based on various independent variables. 
+Based on the summary results of our analysis above, we can conclude that:
 
-
+1. The __vehichle length__, __ground clearnace__ and the __y intercept coefficent__ are statistically likely to provide a non-random amount of variance to the mpg values in the dataset as their p-values are much smaller than our significance level of 0.05%. When the intercept has significant predicitive impact, there may be other variables of interest that can better explain variability of mpg that are not included in the model, or we may need to transform the current regression model (i.e. remove variables with little to none predicitve power) to better improve the model (__vehicle weight__, __spoiler angle__, and __AWD (All Wheel Drive)__).
+2. We can reject the null hypothesis of our regression test because the The slope of the linear model is not considered to be zero.
 
 ## Deliverable 2: Summary Statistics on Suspension Coils
 ---
