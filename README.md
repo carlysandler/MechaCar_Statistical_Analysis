@@ -97,7 +97,7 @@ The design specifications for the MechaCar suspension coils dicate that the vari
 
 1. The sample population of manufacturing lots as a whole has a suspension coil PSI variance of ~62.3, which is comfortability within range of the 100 PSI variance requirement.
 
-2. From an individual lot perspective, lots 1 and 2 both pass the 100 PSI variance of the suspension coils, and with even tighter variability (statistically consistent within ~1 PSI and ~7.5 PSI, respecitively. 
+2. From an individual lot perspective, lots 1 and 2 both pass the mandated 100 PSI variance of the suspension coils with even tighter variability and they are statistically more consistent than the total sample population (within ~1 PSI and ~7.5 PSI, respecitively). 
 
 3. However, lot 3 does not meet the suspension coil PSI variance requirement, with a variance of ~170.30. We can interpret that lot 3 is disproprotionally skewing the total manufacturer's variance to the right. We can assume that there are data points from lot 3 that would be considered outliers, as the SD from the mean is 13 pounds per square inch. 
 
@@ -185,6 +185,18 @@ mean of x
   1496.14 
  ```
 #### _Summary of Results_
+
+The above t-tests evaulate the null hypothesis, which states that true mean of the sample population's PSI is statistically similar to that of the total population's PSI (mu=1500).
+
+1. From the first t-test, which summarizes results across all manufacturing lots, we can see that the true mean of thr sample s 1498.78 with a p-value of 0.06. With this being higher than the assumed significance level of 0.05, we can then conclude that there is not enough sufficent evidence to reject the null hypothesis. In other words, in totalilty, the mean PSI of all three manufacturing lots is statisitcally similar to the presumed population mean of 1500.
+
+2. Sample dataset Lot1 has a p-value of 1, which is much larger than our assumed significance level of 0.05. That means that the propability of another sample prototype producing the same PSI measurement from lot 1 is 100%. Alternatively, there is a 0% chance that another sample population from lot 1 would be statistically different from the population mean.
+
+3. Lot 2 has a similar result output to the first t-test performed of all manufacturing lots, with a p-value of 0.61. Therefore, there is not sufficient evidence to reject the null hypothesis, and the sample mean is statistically similar to the populaiton mean of 1500.
+
+4. Lot 3's t-test results produce a different scenario compared to lot1 and lot2; however, this is not surprising based on our evaluation of its summary statistics of suspension coil's PSI. The p-value output is 0.04, which is less than our assumed significance level of 0.05. Thus, we can say that there is enough evidence to reject our null hypthesis, and the sample population mean PSI is NOT statistically similar to the population's mean.
+
+This is valuable information to the production division: Lot 3's MechaCar protoypes do not meet quality assurance requirements, specifically concerning the suspension coils, and the process in which these cars were manufactured needs to be closely reviewed moving forward. 
 
 ---
 
