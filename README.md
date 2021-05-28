@@ -202,12 +202,28 @@ This is valuable information to the production division: Lot 3's MechaCar protoy
 
 ## Study Design: MechaChar vs Competition
 ---
-<brief intro to study design and though process behind usefullness to production>
+When evaluating the MechaCar compared to its competitors, a consumer would be interested in understanding the maintenance cost of the car prior to making a purchasing decision. Thus, we can design a statistical study to quantify how the MechaCar's repair/maintenance cost, a KPI performance indicator, shakes out compared to the competition. If we were able to quantifiably show that the MechaCar's repair cost is lower than its competitiors, we can utilize this information whilst promoting the car, which can bolster sales once the car is introduced to market.
 
-2. Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer:
-	- examples: cost, city or highway fuel efficency, horse power, maintenance cost, saftey rating.
-3. In your description, address the following questions:
-	- What metrics are you going to test?
-	- what is the null hypothesis or altnernaive hypothesis?
-	- What statistical test would you use to test the hypothesis? And why?
-	- What data is neeeded to run the statistical test?
+Questions to Consider:
+When ideating how to test for maintance cost, as a continuous variable, it is important to ask if there should be a complementary variable to consider to enunciate the true value of lower repair cost as a "performance metric". Cost as a continuous variable should be correlated to miles driven, and miles driven can quantify "longevity of car usage". As a car gets more use, on average it should in theory need marginal repairs.
+
+- __Q: Is there any statistical difference in the maintenance cost of the MechaCar vs its competitors based on the intervals of miles driven?__
+
+The testing method would be a __two-way ANOVA test__.
+- Independent variable 1: Miles Driven, but as categorical datatypes, grouped in buckets that represent various ranges of miles driven based on the car's lifecyle (i.e Intervals of 10k miles).
+- Independent variable 2: Car Manufacturer (categorical)
+- Dependent variable: Maintenance Cost 
+
+__Data Needed__: 
+- A large sample size of cars, including the MechaCar and its competitiors 
+- Summary Statistics of Miles Driven to break up into Quartiles for categorical use
+- Maintenance Cost of Car over time
+
+```
+H0: The mean maintenance costs of each car manufacturer over the lifecycle of the car (measured in ranges of miles driven) are equal.
+
+Ha: At least one of the means is different from all other groups (Mechacar's cost is lower)
+```
+
+Technical Analysis would require the `aov()` and `summary()` functions of R to produce the results. This would be predicated on first delving into summary statistics of each cars Miles Driven to effectively group the bucket ranges by quartile, essentially building a new summary dataframe to then perform the aov() test. 
+
