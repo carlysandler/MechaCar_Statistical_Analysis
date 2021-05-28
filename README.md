@@ -62,7 +62,35 @@ Based on the summary results of our analysis above, we can conclude that:
 ---
 #### _Technical Analysis_
 
+```
+#Deliverable 2: Summary Statistics on Suspension Coils
+
+#Import and read in the Suspension_Coil.csv file as a table
+mecha_coil <- read.csv(file='Suspension_Coil.csv', check.names = F, stringsAsFactors = F)
+
+#Create a total_summary dataframe to get summary statistics of PSI column
+total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
+                                          Median_PSI=median(PSI),
+                                          Var_PSI=var(PSI),
+                                          SD_PSI =sd(PSI),.groups = 'keep')
+
+#Create a lot_summary dataframe. Group eacb manufacturing lot by the mean, median, variance and std.dev of PSI column
+lot_summary <- mecha_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),
+                                                                        Median_PSI=median(PSI),
+                                                                        Var_PSI=var(PSI),
+                                                                        SD_PSI =sd(PSI),.groups = 'keep')
+```
+					
+
 _Output of Results_
+
+1. Total Summary Statistics
+
+<img width="307" alt="D2_total_summary" src="https://user-images.githubusercontent.com/77628698/120023385-b320e880-bfbb-11eb-91ad-aaf22272cd85.png">
+
+2. Lot Summary Statistics
+
+<img width="431" alt="D2_lot_summary" src="https://user-images.githubusercontent.com/77628698/120023460-cd5ac680-bfbb-11eb-9c43-93490371153f.png">
 
 #### _Summary of Results_
 
