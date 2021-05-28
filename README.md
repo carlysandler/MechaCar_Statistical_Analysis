@@ -105,7 +105,85 @@ The design specifications for the MechaCar suspension coils dicate that the vari
 ---
 #### _Technical Analysis_
 
+1. All Manufacturing Lots
+```
+> #Deliverable 3: T-Tests on Suspension Coils
+> #All Manufacturing Lots
+> t.test(mecha_coil$PSI, mu=1500)
 
+	One Sample t-test
+
+data:  mecha_coil$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+```
+
+*Rscript for subsetted manufacturing lot tables required for sample population t-test
+
+```
+#Subset summary tables for each manufacturing lot
+lot1 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot1')
+lot2 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot2')
+lot3 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot3')
+
+#Subset Manufacturing Lots t-tests
+t.test(lot1$PSI, mu=1500)
+t.test(lot2$PSI, mu=1500)
+t.test(lot3$PSI, mu=1500)
+```
+2. Lot 1
+
+```
+> t.test(lot1$PSI, mu=1500)
+
+	One Sample t-test
+
+data:  lot1$PSI
+t = 0, df = 49, p-value = 1
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.719 1500.281
+sample estimates:
+mean of x 
+     1500 
+```
+
+3. Lot 2
+```
+> t.test(lot2$PSI, mu=1500)
+
+	One Sample t-test
+
+data:  lot2$PSI
+t = 0.51745, df = 49, p-value = 0.6072
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.423 1500.977
+sample estimates:
+mean of x 
+   1500.2 
+```
+
+4. Lot 3
+```
+> t.test(lot3$PSI, mu=1500)
+
+	One Sample t-test
+
+data:  lot3$PSI
+t = -2.0916, df = 49, p-value = 0.04168
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1492.431 1499.849
+sample estimates:
+mean of x 
+  1496.14 
+ ```
 #### _Summary of Results_
 
 ---
