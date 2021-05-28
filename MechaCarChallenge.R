@@ -31,3 +31,18 @@ lot_summary <- mecha_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI
                                                                         Median_PSI=median(PSI),
                                                                         Var_PSI=var(PSI),
                                                                         SD_PSI =sd(PSI),.groups = 'keep')
+
+#Deliverable 3: T-Tests on Suspension Coils
+
+#All Manufacturing Lots t-test
+t.test(mecha_coil$PSI, mu=1500)
+
+#Subset summary tables for each manufacturing lot
+lot1 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot1')
+lot2 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot2')
+lot3 <- mecha_coil %>% filter(Manufacturing_Lot=='Lot3')
+
+#Subset Manufacturing Lots t-tests
+t.test(lot1$PSI, mu=1500)
+t.test(lot2$PSI, mu=1500)
+t.test(lot3$PSI, mu=1500)
